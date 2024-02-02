@@ -17,7 +17,9 @@
 
 {% block body_block %}
         {% if category %}
+        {% if user.is_authenticated %}
         <a href="/rango/category/{{category.slug }}/add_page/">Add Page</a> <br/>
+        {% endif %}
         <h1>{{ category.name }}</h1>
         {% if pages %}
         <ul>
